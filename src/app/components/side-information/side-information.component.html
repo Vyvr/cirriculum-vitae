@@ -1,0 +1,92 @@
+<mat-card class="side_info_card">
+  <img
+    mat-card-image
+    class="profile_picture"
+    src="./../../../assets/profile_picture.png"
+    alt="profile"
+  />
+  <h2>{{ data.name }}</h2>
+  <div *ngIf="data?.work" class="info_container--padding">
+    <mat-icon> work </mat-icon>
+    {{ data.work }}
+  </div>
+  <div *ngIf="data?.gitLink" class="info_container--padding">
+    <mat-icon> device_hub </mat-icon>
+    {{ data.gitLink }}
+  </div>
+  <div class="info_container--padding">
+    <mat-icon> home </mat-icon>
+    {{ data.home }}
+  </div>
+  <div class="info_container--padding">
+    <mat-icon> email </mat-icon>
+    <a [href]="'mailto:' + data.email">
+      {{ data.email }}
+    </a>
+  </div>
+  <div class="info_container--padding">
+    <mat-icon> phone </mat-icon>
+    {{ data.phone }}
+  </div>
+
+  <div class="skills_container">
+    <div class="skills_header">
+      <h2>Skills</h2>
+    </div>
+
+    <div class="programming_skills">
+      <div class="info_container">
+        <h3>
+          <mat-icon> code </mat-icon>
+          Programming languages
+        </h3>
+      </div>
+      <div
+        *ngFor="let skill of data.skills.programmingLanguages"
+        class="skill_container"
+      >
+        {{ skill.type }}
+        <mat-progress-bar
+          mode="determinate"
+          [value]="skill.percent"
+          class="progress_bar"
+        ></mat-progress-bar>
+      </div>
+    </div>
+
+    <div class="os_skills">
+      <div class="info_container">
+        <h3>
+          <mat-icon> computer </mat-icon>
+          Operating systems
+        </h3>
+      </div>
+      <div
+        *ngFor="let skill of data.skills.operatingSystems"
+        class="skill_container"
+      >
+        {{ skill.type }}
+        <mat-progress-bar
+          mode="determinate"
+          [value]="skill.percent"
+        ></mat-progress-bar>
+      </div>
+    </div>
+
+    <div class="language_skills">
+      <div class="info_container">
+        <h3>
+          <mat-icon> language </mat-icon>
+          Languages
+        </h3>
+      </div>
+      <div *ngFor="let skill of data.skills.languages" class="skill_container">
+        {{ skill.type }}
+        <mat-progress-bar
+          mode="determinate"
+          [value]="skill.percent"
+        ></mat-progress-bar>
+      </div>
+    </div>
+  </div>
+</mat-card>

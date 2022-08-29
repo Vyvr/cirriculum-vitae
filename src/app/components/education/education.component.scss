@@ -1,0 +1,41 @@
+@use "global" as global;
+
+.edu_info_card {
+  width: global.$right_card_width;
+}
+
+.edu_info_header {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+.info_container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.date {
+  padding: 0.5rem;
+  color: global.$primary;
+  display: flex;
+  align-items: center;
+}
+
+.filled_label {
+  color: white;
+  background-color: global.$primary;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  &--left{
+    @extend .filled_label;
+    margin-left: 0.3rem;
+  }
+}
+

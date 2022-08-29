@@ -1,0 +1,7 @@
+@use 'global' as global;
+
+.footer_card {
+  width: global.$right_card_width;
+  font-size: xx-small;
+  font-weight: 500;
+}

@@ -1,0 +1,46 @@
+<mat-card class="work_info_card">
+  <div class="work_info_header">
+    <mat-icon> work </mat-icon>
+    Work Experience
+  </div>
+
+  <div class="work_container" *ngFor="let work of data">
+    <div class="info_container">
+      <div class="header">
+        {{ work.name }}
+        <ng-container *ngIf="work?.companyLink; else noLink">
+          <a [href]="work?.companyLink">@{{ work.company }}</a>
+        </ng-container>
+        <ng-template #noLink> @{{ work.company }} </ng-template>
+      </div>
+      <div class="date">
+        <mat-icon> calendar_today </mat-icon>
+        {{ convertDateToString(work.fromDate) }} -
+        <mat-label
+          class="filled_label--left"
+          *ngIf="convertDateToString(work.toDate) === 'Now'; else notCurrent"
+        >
+          Current
+        </mat-label>
+        <ng-template #notCurrent>
+          {{ convertDateToString(work.toDate) }}
+        </ng-template>
+      </div>
+      <div class="description">
+        {{ work.description }}
+      </div>
+      <div class="technologies" *ngIf="work?.technologies">
+        Used technologies:
+        <div class="technologies-list">
+          <mat-label
+            *ngFor="let item of work?.technologies"
+            class="filled_label technologies-list__element"
+          >
+            {{ item }}
+          </mat-label>
+        </div>
+      </div>
+    </div>
+    <mat-divider *ngIf="data.indexOf(work) !== data.length - 1"></mat-divider>
+  </div>
+</mat-card>

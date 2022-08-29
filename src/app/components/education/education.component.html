@@ -1,0 +1,34 @@
+<mat-card class="edu_info_card">
+  <div class="edu_info_header">
+    <mat-icon> school </mat-icon>
+    Education
+  </div>
+
+  <div class="edu_container" *ngFor="let edu of data">
+    <div class="info_container">
+      <div class="header">
+        <a [href]="edu.schoolLink">
+          {{ edu.school }}
+        </a>
+        in {{ edu.location }}
+      </div>
+
+      <div class="date">
+        <mat-icon> calendar_today </mat-icon>
+        {{ convertDateToString(edu.fromDate) }} -
+        <mat-label
+          class="filled_label--left"
+          *ngIf="edu?.plannedToDate; else notCurrent"
+        >
+          Current (planned: {{ convertDateToString(edu.plannedToDate) }})
+        </mat-label>
+        <ng-template #notCurrent>
+          {{ convertDateToString(edu.toDate) }}
+        </ng-template>
+      </div>
+      <div class="specialty">Specialty: {{ edu.specialty }}</div>
+      <div class="degree">Degree: {{ edu.degree }}</div>
+    </div>
+    <mat-divider *ngIf="data.indexOf(edu) !== data.length - 1"></mat-divider>
+  </div>
+</mat-card>

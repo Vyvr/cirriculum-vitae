@@ -1,0 +1,31 @@
+@use "global" as global;
+
+.profile_picture {
+  width: global.$picture_width;
+}
+
+.side_info_card {
+  width: global.$left_card_width;
+}
+
+.info_container {
+  display: flex;
+  align-items: center;
+  h2,
+  h3 {
+    display: flex;
+    align-items: center;
+  }
+  &--padding {
+    @extend .info_container;
+    padding: 0.5rem 0;
+  }
+}
+
+.skills_header {
+  padding-top: 1rem;
+}
+
+.skill_container {
+  padding-bottom: 1rem;
+}

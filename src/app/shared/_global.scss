@@ -1,0 +1,51 @@
+$primary: #405bb5;
+$primary_background: adjust-color($primary, $lightness: 35%);
+$max_width: 210mm;
+$left_card_width: 16rem;
+$picture_width: calc($left_card_width + 2rem);
+$right_card_width: calc($max_width - 3rem - $picture_width);
+
+.content {
+  width: $max_width;
+  padding: 1rem;
+  display: flex;
+  font-size: small;
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: $primary;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background: $primary_background;
+}
+
+.between {
+  &--horizontal {
+    @extend .between;
+    width: 1rem;
+  }
+  &--vertical {
+    @extend .between;
+    height: 1rem;
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-icon {
+  color: $primary;
+  padding-right: 1rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
