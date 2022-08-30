@@ -2,6 +2,7 @@ import {
   SideInformationComponentData,
   WorkComponentData,
   EducationComponentData,
+  OtherComponentData,
 } from './data.models';
 
 export const sideInformationComponentData: SideInformationComponentData = {
@@ -102,6 +103,6 @@ export const educationComponentData: EducationComponentData[] = [
   },
 ];
 
-// export const otherComponentData = {
-//   text: "Hobbies: Krav maga, skiing, tennis, IRL RPG, programming, application design"
-// };
+export const otherComponentData: OtherComponentData = {
+  text: "Hobbies: Krav maga, skiing, tennis, IRL RPG, programming, application design"
+};

@@ -1,7 +1,10 @@
 @use "global" as global;
 
 .footer {
-  padding: 0 1rem 1rem 1rem;
+  position: absolute;
+  width: global.$right_card_width;
+  bottom: 0;
+  right: 0;
 }
 
 .actions {

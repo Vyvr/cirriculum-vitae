@@ -12,7 +12,9 @@
   </div>
   <div *ngIf="data?.gitLink" class="info_container--padding">
     <mat-icon> device_hub </mat-icon>
-    {{ data.gitLink }}
+    <a [href]="data.gitLink">
+      {{ data.gitLink }}
+    </a>
   </div>
   <div class="info_container--padding">
     <mat-icon> home </mat-icon>

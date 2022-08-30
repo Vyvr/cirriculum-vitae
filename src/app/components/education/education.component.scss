@@ -1,8 +1,8 @@
 @use "global" as global;
 
-.edu_info_card {
-  width: global.$right_card_width;
-}
+// .edu_info_card {
+//   width: global.$right_card_width;
+// }
 
 .edu_info_header {
   display: flex;
@@ -13,7 +13,7 @@
 
 .info_container {
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .header {
@@ -22,7 +22,7 @@
 }
 
 .date {
-  padding: 0.5rem;
+  margin: 0.5rem;
   color: global.$primary;
   display: flex;
   align-items: center;
