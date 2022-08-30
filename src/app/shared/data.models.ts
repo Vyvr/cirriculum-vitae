@@ -29,6 +29,10 @@ export interface EducationComponentData {
   plannedToDate?: Date;
 }
 
+export interface OtherComponentData {
+  text: string;
+}
+
 interface SkillsData {
   programmingLanguages: ProgrammingLanguagesData[];
   operatingSystems: OperatingSystemsData[];

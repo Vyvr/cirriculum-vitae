@@ -1,15 +1,14 @@
 $primary: #405bb5;
 $primary_background: adjust-color($primary, $lightness: 35%);
 $max_width: 210mm;
-$left_card_width: 16rem;
-$picture_width: calc($left_card_width + 2rem);
-$right_card_width: calc($max_width - 3rem - $picture_width);
+$left_card_width: 82mm;
+$picture_width: calc($left_card_width + 3rem);
+$right_card_width: calc($max_width - $left_card_width - 3rem);
 
 .content {
   width: $max_width;
-  padding: 1rem;
   display: flex;
-  font-size: small;
+  position: relative;
 }
 
 ::ng-deep .mat-progress-bar-fill::after {

@@ -1,0 +1,16 @@
+@use "global" as global;
+
+// .other_info_card {
+//   width: global.$right_card_width;
+// }
+
+.other_info_header {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+.other_info_content {
+  padding-top: 0.5rem;
+}

@@ -9,11 +9,13 @@ import { MaterialModule } from '@shared/material.module';
 import { WorkComponent } from '@components/work/work.component';
 import { EducationComponent } from '@components/education/education.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { OtherComponent } from '@components/other/other.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideInformationComponent,
+    OtherComponent,
     WorkComponent,
     EducationComponent,
     FooterComponent,
